@@ -31,6 +31,10 @@ nav {
 .cart-icon {
     width: 30px;
     cursor: pointer;
+    transition: .3s;
+}
+.cart-icon:hover {
+    transform: translateY(-5px);
 }
 
 nav ul {
@@ -79,9 +83,21 @@ nav ul li a:hover::after {
 }
 
 .text-box h1 {
-    font-size: 190px;
+    font-size: 170px;
     line-height: 160px;
     margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
 }
 
 .text-box h3 {
@@ -101,9 +117,17 @@ nav ul li a:hover::after {
     text-decoration: none;
     padding: 10px 20px;
     margin-right: 20px;
-    border: 2px solid #fff;
+    border: 2px solid #27254D;
     display: flex;
     align-items: center;
+    background-color: #0F101F;
+    transition: .3s;
+}
+
+.text-box a:hover {
+    background-color: transparent;
+    transform: translateY(-5px);
+    border: 2px solid #fff;
 }
 
 .text-box a span {
